@@ -1,0 +1,14 @@
+Add your property photos to this folder.
+
+Expected filenames:
+hero.jpg
+ocean-view.jpg
+activities.jpg
+kitchen.jpg
+faq.jpg
+contact.jpg
+fridge.jpg
+oven.jpg
+coffee.jpg
+dishwasher.jpg
+microwave.jpg
