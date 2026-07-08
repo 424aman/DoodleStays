@@ -15,14 +15,154 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .oven-photo-guide {
+      margin-top: -1rem;
+      padding-top: 0;
+    }
+
+    .oven-photo-panel {
+      background: linear-gradient(135deg, #fffaf2 0%, #f4eadc 100%);
+      border: 1px solid rgba(50, 43, 35, 0.1);
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(52, 43, 33, 0.12);
+      overflow: hidden;
+      padding: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    .oven-photo-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      align-items: end;
+      margin-bottom: 1.35rem;
+    }
+
+    .oven-photo-header h2 {
+      margin: 0.25rem 0 0;
+    }
+
+    .oven-photo-header p:last-child {
+      max-width: 42rem;
+      margin: 0.65rem 0 0;
+      color: #6b6258;
+    }
+
+    .oven-photo-badge {
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #4f453b;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
+      white-space: nowrap;
+      box-shadow: inset 0 0 0 1px rgba(50, 43, 35, 0.08);
+    }
+
+    .oven-step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .oven-step-card {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(50, 43, 35, 0.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(52, 43, 33, 0.08);
+    }
+
+    .oven-image-placeholder {
+      position: relative;
+      display: flex;
+      min-height: 190px;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(135deg, rgba(78, 102, 118, 0.12), rgba(212, 184, 142, 0.22)),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.45) 0 10px, rgba(255, 255, 255, 0.2) 10px 20px);
+      color: #675b4f;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .oven-image-placeholder img {
+      width: 100%;
+      height: 100%;
+      min-height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .oven-step-number {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      display: inline-flex;
+      width: 2rem;
+      height: 2rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #3f352d;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(52, 43, 33, 0.14);
+    }
+
+    .oven-step-caption {
+      padding: 1rem;
+    }
+
+    .oven-step-caption h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .oven-step-caption p {
+      margin: 0;
+      color: #6b6258;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .oven-photo-header {
+        grid-template-columns: 1fr;
+      }
+
+      .oven-photo-badge {
+        justify-self: start;
+      }
+
+      .oven-step-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .oven-step-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .oven-image-placeholder,
+      .oven-image-placeholder img {
+        min-height: 220px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="#home" data-page-link="home">
-      <span class="brand-mark">BH</span>
+      <span class="brand-mark">DS</span>
       <span>
-        <strong>Beach House</strong>
+        <strong>Doodle Stays</strong>
         <small>Guest Guide</small>
       </span>
     </a>
@@ -333,6 +473,98 @@
             </div>
           </div>
         </article>
+
+
+
+      <section class="section-shell oven-photo-guide" aria-labelledby="oven-photo-guide-title">
+        <div class="oven-photo-panel">
+          <div class="oven-photo-header">
+            <div>
+              <p class="eyebrow dark">Wolf steam oven</p>
+              <h2 id="oven-photo-guide-title">How to operate the oven</h2>
+              <p>
+                Follow these photos from left to right. Replace each placeholder
+                with a close-up photo of the actual oven screen, dial, or tray position.
+              </p>
+            </div>
+            <span class="oven-photo-badge">6-step photo guide</span>
+          </div>
+
+          <div class="oven-step-grid">
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">1</span>
+                <span>Add photo 1</span>
+                <!-- Replace with: <img src="images/oven-step-1.jpg" alt="Oven power button and home screen" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Turn the oven on</h3>
+                <p>Press the power button and wait for the display to wake up.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">2</span>
+                <span>Add photo 2</span>
+                <!-- Replace with: <img src="images/oven-step-2.jpg" alt="Oven cooking mode menu" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Select the cooking mode</h3>
+                <p>Choose the mode you need, such as Steam, Bake, or Convection.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">3</span>
+                <span>Add photo 3</span>
+                <!-- Replace with: <img src="images/oven-step-3.jpg" alt="Oven temperature setting screen" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Set the temperature</h3>
+                <p>Use the control panel to enter the desired cooking temperature.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">4</span>
+                <span>Add photo 4</span>
+                <!-- Replace with: <img src="images/oven-step-4.jpg" alt="Oven start button" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Press Start</h3>
+                <p>Start the oven and allow it to preheat before placing food inside.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">5</span>
+                <span>Add photo 5</span>
+                <!-- Replace with: <img src="images/oven-step-5.jpg" alt="Food placed safely inside the oven" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Place food inside</h3>
+                <p>Use oven-safe cookware and leave space for heat or steam to circulate.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="oven-step-card">
+              <div class="oven-image-placeholder">
+                <span class="oven-step-number">6</span>
+                <span>Add photo 6</span>
+                <!-- Replace with: <img src="images/oven-step-6.jpg" alt="Oven off or cancel button" /> -->
+              </div>
+              <figcaption class="oven-step-caption">
+                <h3>Turn the oven off</h3>
+                <p>Press Cancel or Off when finished and confirm the display is no longer heating.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
         <article class="appliance-card">
           <div class="appliance-image coffee-image"></div>
