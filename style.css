@@ -449,13 +449,13 @@ h3 {
 .faq-banner {
   background-image:
     linear-gradient(rgba(40, 55, 54, 0.18), rgba(40, 55, 54, 0.7)),
-    url("images/faq.jpg");
+    url("images/faq-banner.jpg");
 }
 
 .contact-banner {
   background-image:
     linear-gradient(rgba(37, 59, 61, 0.22), rgba(37, 59, 61, 0.7)),
-    url("images/contact.jpg");
+    url("images/contact-banner.jpg");
 }
 
 .activity-section {
