@@ -437,13 +437,13 @@ h3 {
 .activities-banner {
   background-image:
     linear-gradient(rgba(28, 57, 61, 0.18), rgba(28, 57, 61, 0.68)),
-    url("images/activities.jpg");
+    url("images/beach-banner.jpg");
 }
 
 .kitchen-banner {
   background-image:
     linear-gradient(rgba(44, 53, 50, 0.24), rgba(44, 53, 50, 0.66)),
-    url("images/kitchen.jpg");
+    url("images/kitchen-banner.jpg");
 }
 
 .faq-banner {
