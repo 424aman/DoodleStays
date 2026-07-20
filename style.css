@@ -702,6 +702,11 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    background: var(--cream);
+    backdrop-filter: none;
+  }
+  
   .menu-toggle {
     display: block;
   }
